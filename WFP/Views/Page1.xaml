@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="WFP.Views.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WFP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <CommandBar>
+            <AppBarToggleButton Icon="Add" Label="Add" Click="AppBarButton_Click" />
+            <AppBarToggleButton Icon="View" Label="View" Click="Click" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0,0"/>
+            <AppBarSeparator/>
+
+            <CommandBar.Content>
+                <TextBlock Text="Add File" Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
+        <Grid>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <RelativePanel Margin="0,25,0,0">
+                    <TextBox Width="340">
+                        <TextBox.Header>
+                            <TextBlock>File Name</TextBlock>
+                        </TextBox.Header>
+                    </TextBox>
+                </RelativePanel>
+                <RelativePanel Margin="0,25,0,0">
+                    <TextBox Width="640" Height="200">
+                        <TextBox.Header>
+                            <TextBlock>Content</TextBlock>
+                        </TextBox.Header>
+                    </TextBox>
+                </RelativePanel>
+                <Button Style="{StaticResource AccentButtonStyle}" FontWeight="Medium" FontSize="18" Content="Save File" Margin="0,25,0,0"></Button>
+
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
